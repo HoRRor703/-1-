@@ -1,26 +1,15 @@
-# Используем базовый образ Python
+
+# Use the official image as a parent image
 FROM python:3.8-slim
 
-# Устанавливаем системные зависимости
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        gcc \
-        libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-# Устанавливаем зависимости Python
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Копируем исходный код в контейнер
+# Set the working directory in the container
 WORKDIR /app
-COPY . .
 
-# Определяем переменную окружения для токена Telegram бота
-ENV TELEGRAM_BOT_TOKEN="6527826296:AAFpjpjchnBeYjMZ9Y-Xzi6bIvmuEfXHgtg"
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# Указываем порт, который будем использовать для webhook или для локального тестирования
+# Install necessary dependencies
+RUN pip install --no-cache-dir python-telegram-bot openai g4f
 
-
-# Запускаем бота
+# Specify the command to run on container start
 CMD ["python", "test.py"]
