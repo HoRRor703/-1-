@@ -20,7 +20,7 @@ COPY . .
 ENV TELEGRAM_BOT_TOKEN="6527826296:AAFpjpjchnBeYjMZ9Y-Xzi6bIvmuEfXHgtg"
 
 # Указываем порт, который будем использовать для webhook или для локального тестирования
-EXPOSE 8443
+
 
 # Запускаем бота
 CMD ["python", "test.py"]
