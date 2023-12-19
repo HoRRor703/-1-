@@ -10,6 +10,6 @@ COPY . /app
 
 # Install necessary dependencies
 RUN pip install --no-cache-dir python-telegram-bot openai g4f
-EXPOSE 8080 1337
+EXPOSE 8080
 # Specify the command to run on container start
 CMD ["python", "test.py"]
