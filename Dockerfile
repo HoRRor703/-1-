@@ -17,7 +17,7 @@ WORKDIR /app
 COPY . .
 
 # Определяем переменную окружения для токена Telegram бота
-ENV TELEGRAM_BOT_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
+ENV TELEGRAM_BOT_TOKEN="6527826296:AAFpjpjchnBeYjMZ9Y-Xzi6bIvmuEfXHgtg"
 
 # Указываем порт, который будем использовать для webhook или для локального тестирования
 EXPOSE 8443
