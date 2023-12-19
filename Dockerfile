@@ -22,4 +22,4 @@ ENV TELEGRAM_BOT_TOKEN="6527826296:AAFpjpjchnBeYjMZ9Y-Xzi6bIvmuEfXHgtg"
 
 
 # Запускаем бота
-CMD ["python", "main.py"]
+CMD ["python", "test.py"]
