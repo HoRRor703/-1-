@@ -1,8 +1,0 @@
-sp=[1221, 90, -100, 90, -5, 50]
-for i in range(len(sp)):
-    minn=i
-    for l in range(i, len(sp)):
-        if sp[l]<sp[minn]:minn=l
-    sp[minn],sp[i]=sp[i],sp[minn]
-
-print(sp)
